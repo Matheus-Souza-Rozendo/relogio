@@ -1,0 +1,133 @@
+/*formatação do cabeçalho*/
+
+header button, .offcanvas button{
+    background-color: rgba(0, 0, 0, 0);
+    border:none
+}
+
+header{
+    background-color: #007ABC;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+/*formatação da barra lateral de links*/
+aside a{
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; 
+    align-items: center !important;
+
+}
+aside{
+    background-color: #555;
+   /*height: 100% !important;*/
+}
+
+a{
+    color: white !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+a:hover{
+    background-color: #444 !important;
+}
+
+.btn-ativo{
+    background-color: rgb(100, 100, 100) !important;
+}
+.btn-ativo:hover{
+    background-color: rgb(100, 100, 100) !important;
+}
+
+/*formatação do body*/
+body{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+article{
+    height: 100vh;
+}
+
+/*formatação artigo*/
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    min-height: 700px !important;
+}
+
+
+/*formatação relogio*/
+.display-1{
+    font-size: 8rem !important;
+    font-family: 'Open Sans', sans-serif !important;
+    
+}
+
+small{
+    font-size: 3.5rem;
+}
+
+.card{
+    background-color:rgb(240 240 240 / 20%) !important;
+    border-radius: 10px !important;
+    box-shadow: 1px 0px 2px black;
+}
+
+
+.relogio-dia{
+    color: black !important;
+}
+
+
+/*formatação offcanvas*/
+.btn-close{
+    color:white !important;
+}
+
+@media screen and (min-width:350px) and (max-width:993px) {
+    .display-1{
+        font-size: 4rem !important;
+    } 
+    small{
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width:349px) {
+    .display-1{
+        font-size: 2.5rem !important;
+    } 
+    small{
+        font-size: 1.09rem;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .logo,aside{
+        display: none!important;
+    }
+
+    .menu-mobile{
+        display: inline-block !important;
+    }
+    .article{
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    article button{
+        transform: scale(1.3);
+    }
+    
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Relógio</title>
+	<meta name="description" content="Relogio digital, mude a cor e formate do jeito que desejar">
+	<meta name="keywords"
+		content="relogio,mudar cor, data, hora certa, horário oficial, horario de brasilia, data e hora,horario">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="shortcut icon" href="imagens/matheus_logo.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="p-0 m-0">
+	<!-- inicio do header-->
+	<header class="container-fluid">
+		<section class="row justify-content-between align-items-center">
+			<div class="col-auto">
+				<img class="img-fluid logo" src="imagens/matheus_logo.png" alt="logo da pagina">
+				<button class="menu-mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+					aria-controls="menu de navegação">
+					<img src="imagens/bi_list.svg" alt="menu-mobile">
+				</button>
+			</div>
+			<div class="col-auto ml-2">
+				<button class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+					aria-controls="menu de configuração"><img src="imagens/bi_gear-wide-connected.svg"
+						alt="configurações"></button>
+			</div>
+		</section>
+	</header>
+	<!-- fim do header-->
+
+	<!-- inicio da main-->
+	<main class="container-fluid">
+		<section class="row">
+			<aside class="col-md-2 col-lg-2 col-xl-1 bg-dark p-0">
+				<nav>
+					<a class="btn btn-link btn-ativo p-1" href="/index.html" title="link para a pagina atual">
+						<img src="imagens/bi_clock.svg" alt="icone relógio">
+						<span>relógio</span>
+					</a>
+					<a class="btn btn-link" href="/cronometro.html" title="link para o cronômetro">
+						<img src="imagens/bi_stopwatch.svg" alt="icone cronômetro">
+						<span>cronômetro</span>
+					</a>
+				</nav>
+			</aside>
+			<article class="col" id="artigo">
+				<section class="card my-5  text-center p-2 p-sm-5 relogio-dia">
+
+					<time class="display-1 hora"></time>
+					<time class="h2 calendar"></time>
+				</section>
+			</article>
+		</section>
+	</main>
+	<!-- fim da main-->
+
+	<!-- inicio do footer-->
+	<footer class="container-fluid pt-2" id="footer">
+		<section class="row">
+			<address class="col-sm-10 col-md-8 col-lg-4 col-xl-4">
+				<section class="w-100 my-1">
+					<img src="imagens/zap.svg" alt="logo whatsapp">
+					<span>&nbsp +55 11 993260-9702</span>
+				</section>
+				<section class="w-100 my-1">
+					<img src="imagens/gmail.svg" alt="logo gmail">
+					<span> &nbsp matheusrozendo234674@gmail.com</span>
+				</section>
+				<section class="w-100">
+					<span> Autor: Matheus Souza Rozendo</span>
+				</section>
+		</section>
+		</address>
+		</section>
+	</footer>
+	<!-- #fim do footer-->
+
+
+
+	<!-- inicio do ofcanvas de configuração-->
+	<div class="offcanvas offcanvas-end bg-dark text-white " tabindex="-1" id="offcanvasRight" aria-labelledby="">
+		<div class="offcanvas-header">
+			<h5 id="offcanvasCenterLabel">Configurações</h5>
+			<button class="btn" data-bs-dismiss="offcanvas" aria-label="Fechar">
+				<img src="imagens/close_white_24dp.svg" alt="icone de fechar">
+			</button>
+		</div>
+		<hr class="dropdown-divider">
+		<div class="offcanvas-body">
+			<form action="">
+				<div class="form-check form-switch">
+					<label class="form-check-label" for="flexSwitchCheckDefault">Mostrar Data</label>
+					<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onchange="esconde()">
+				</div>
+				<div class="my-3">
+					<label for="exampleColorInput" class="form-label">Cor do relógio</label>
+					<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#000000"
+						title="Escolha a cor do relógio" onchange="mudarCor(value)">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- fim do ofcanvas de configuração-->
+
+	<!-- inicio do ofcanvas de menu-->
+	<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasExample"
+		aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header">
+			<button class="btn" data-bs-dismiss="offcanvas" aria-label="Fechar">
+				<img src="imagens/close_white_24dp.svg" alt="icone de fechar">
+			</button>
+		</div>
+		<div class="offcanvas-body">
+			<nav class="btn-group-vertical w-100">
+				<a class="btn btn-link btn-ativo p-1 text-start" href="/index.html" title="link para a pagina atual">
+					<img src="imagens/bi_clock.svg" alt="icone relógio">
+					<span class="h3 px-1">relógio</span>
+				</a>
+				<a class="btn btn-link text-start p-1 my-1" href="/cronometro.html" title="link para o cronômetro">
+					<img src="imagens/bi_stopwatch.svg" alt="icone cronômetro">
+					<span class="h3 px-1">cronômetro</span>
+				</a>
+			</nav>
+		</div>
+	</div>
+	<!-- fim do ofcanvas de menu-->
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+		crossorigin="anonymous"></script>
+	<script src="/js/time.js"></script>
+	<script src="js/js_index.js"></script>
+	
+</body>
+</html>
