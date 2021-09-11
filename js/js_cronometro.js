@@ -2,7 +2,7 @@ var data = new Date();
 var hora= data.getHours();
 
 function escolheTema(){
-    if((hora<6)||(hora>18)){
+    if((hora<6)||(hora>=18)){
         document.getElementById("artigo").style.backgroundImage="url(imagens/noite.jpg)";
         mudaCor("#FFFFFF");
         document.getElementById("footer").style.backgroundColor="rgb(0,0,0)";
