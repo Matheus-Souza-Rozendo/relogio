@@ -5,7 +5,7 @@ d.show();
 var ver=true;
 
 function escolheTema(){
-    if((hora.hora<6)||(hora.hora>18)){
+    if((hora.hora<6)||(hora.hora>=18)){
         document.getElementById("artigo").style.backgroundImage="url(imagens/noite.jpg)";
         hora.mudaCor("#FFFFFF","hora");
         d.mudaCor("#FFFFFF","calendar");
